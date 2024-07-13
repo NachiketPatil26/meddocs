@@ -1,0 +1,290 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>MedDocs</title>
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@700&family=Open+Sans&display=swap');
+
+        body {
+            margin: 0;
+            font-family: 'Open Sans', sans-serif;
+            background-color: #000036;
+            color: #ffffff;
+        }
+
+        h1, h2, h3 {
+            font-family: 'Montserrat', sans-serif;
+        }
+
+        .hero {
+            background: linear-gradient(135deg, #000036 0%, #086375 100%);
+            height: 100vh;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            text-align: center;
+            padding: 20px;
+        }
+
+        .hero h1 {
+            font-size: 2.5em;
+            margin-bottom: 20px;
+        }
+
+        .hero p {
+            font-size: 1.2em;
+            margin-bottom: 40px;
+        }
+
+        .hero .cta {
+            background-color: #1DD3B0;
+            color: #000036;
+            padding: 15px 30px;
+            text-decoration: none;
+            font-weight: bold;
+            border-radius: 5px;
+        }
+
+        .hero img {
+            margin-top: 20px;
+            width: 200px;
+        }
+
+        .benefits, .testimonials, .footer {
+            background: #1A1A40;
+            padding: 40px 20px;
+        }
+
+        .benefits .container, .testimonials .container, .footer .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            text-align: center;
+        }
+
+        .benefits h2, .testimonials h2 {
+            margin-bottom: 40px;
+        }
+
+        .benefit {
+            display: flex;
+            align-items: center;
+            padding: 20px;
+            margin: 20px 0;
+            border: 2px solid #1DD3B0; /* Default border color */
+            border-radius: 5px;
+            background-color: rgba(255, 255, 255, 0.1);
+            transition: background 0.5s ease-in-out, transform 0.3s ease-in-out;
+            position: relative;
+            overflow: hidden;
+            opacity: 0;
+            transform: translateY(50px);
+            transition: opacity 0.5s ease-out, transform 0.5s ease-out;
+        }
+
+        .benefit img {
+            width: 100px;
+            height: 100px;
+            margin-right: 20px;
+        }
+
+        .benefit-content {
+            text-align: left;
+        }
+
+        .benefit:hover {
+            background: radial-gradient(circle, #1DD3B0 10%, rgba(255, 255, 255, 0.1) 100%);
+            transform: translateY(-5px);
+        }
+
+        .benefit:nth-child(2) {
+            border-color: #086375;
+        }
+
+        .benefit:nth-child(3) {
+            border-color: #AFFC41;
+        }
+
+        .how-it-works {
+            background: #1A1A40;
+            color: #ffffff;
+            padding: 40px 20px;
+            text-align: center;
+        }
+
+        .how-it-works h2 {
+            margin-bottom: 40px;
+        }
+
+        .steps {
+            display: flex;
+            justify-content: space-around;
+            flex-wrap: wrap;
+        }
+
+        .step {
+            display: flex;
+            align-items: center;
+            flex-direction: column;
+            padding: 20px;
+            width: 30%;
+            margin: 10px 0;
+            border: 2px solid transparent;
+            border-radius: 5px;
+            background-color: rgba(255, 255, 255, 0.1);
+            opacity: 0;
+            transform: translateY(50px);
+            transition: opacity 0.5s ease-out, transform 0.5s ease-out;
+            transition: transform 0.3s ease-in-out;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .step img {
+            width: 100px;
+            height: 100px;
+            margin-bottom: 20px;
+        }
+
+        .step:nth-child(1) {
+            border-color: #086375;
+        }
+
+        .step:nth-child(2) {
+            border-color: #1DD3B0;
+        }
+
+        .step:nth-child(3) {
+            border-color: #AFFC41;
+        }
+
+        .step:hover {
+            transform: scale(1.05);
+        }
+
+        .step:hover ~ .step {
+            transform: translateX(5px);
+        }
+
+        .footer {
+            text-align: center;
+            padding: 20px 0;
+            background: #000036;
+            color: #ffffff;
+        }
+
+        .footer a {
+            color: #1DD3B0;
+            text-decoration: none;
+            margin: 0 10px;
+        }
+
+        .social-media-icons img {
+            width: 30px;
+            margin: 0 10px;
+        }
+    </style>
+</head>
+<body>
+    <!-- Hero Section -->
+    <div class="hero">
+        <h1>Your Health Data, Secure and Accessible</h1>
+        <p>MedDocs centralizes your medical records, accessible by authorized hospitals with your permission.</p>
+        <a href="#" class="cta">Sign Up for Free</a>
+        <img src="heart-illustration.png" alt="Heart Illustration">
+    </div>
+
+    <!-- Benefits Section -->
+    <div class="benefits">
+        <div class="container">
+            <h2>Benefits of MedDocs</h2>
+            <div class="benefit">
+                <img src="paperless-icon.png" alt="Paperless Icon">
+                <div class="benefit-content">
+                    <h3>Paperless Healthcare</h3>
+                    <p>Reduce waste and streamline record management.</p>
+                </div>
+            </div>
+            <div class="benefit">
+                <img src="secure-icon.png" alt="Secure Icon">
+                <div class="benefit-content">
+                    <h3>Secure Access</h3>
+                    <p>Control who sees your medical data.</p>
+                </div>
+            </div>
+            <div class="benefit">
+                <img src="hospital-icon.png" alt="Hospital Icon">
+                <div class="benefit-content">
+                    <h3>Hospital Integration</h3>
+                    <p>Seamless access for authorized providers.</p>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- How It Works Section -->
+    <div class="how-it-works">
+        <h2>How It Works</h2>
+        <div class="steps">
+            <div class="step">
+                <img src="signup-icon.png" alt="Sign Up Icon">
+                <h3>Step 1</h3>
+                <p>Sign up for a free account and get started immediately.</p>
+            </div>
+            <div class="step">
+                <img src="upload-icon.png" alt="Upload Icon">
+                <h3>Step 2</h3>
+                <p>Upload your medical records securely and effortlessly.</p>
+            </div>
+            <div class="step">
+                <img src="access-icon.png" alt="Access Icon">
+                <h3>Step 3</h3>
+                <p>Grant access to authorized hospitals with a single click.</p>
+            </div>
+        </div>
+    </div>
+
+    <!-- Testimonials Section -->
+    <div class="testimonials">
+        <div class="container">
+            <h2>Testimonials</h2>
+            <p>"MedDocs has simplified my healthcare experience. Highly recommend!" - Jane Doe</p>
+            <p>"Secure and easy to use. A must-have for managing medical records." - John Smith</p>
+            <p>"I love the paperless approach and the security features. MedDocs is a game-changer!" - Emma Johnson</p>
+        </div>
+    </div>
+
+    <!-- Footer -->
+    <div class="footer">
+        <div class="container">
+            <p>© 2024 MedDocs. All rights reserved.</p>
+            <div>
+                <a href="#">About Us</a>
+                <a href="#">Contact</a>
+                <a href="#">FAQs</a>
+            </div>
+            <div class="social-media-icons">
+                <a href="#"><img src="facebook-icon.png" alt="Facebook"></a>
+                <a href="#"><img src="twitter-icon.png" alt="Twitter"></a>
+                <a href="#"><img src="instagram-icon.png" alt="Instagram"></a>
+            </div>
+        </div>
+    </div>
+
+    <script>
+        document.addEventListener('scroll', () => {
+            const elements = document.querySelectorAll('.benefit, .step');
+            const windowHeight = window.innerHeight;
+            elements.forEach(element => {
+                const elementTop = element.getBoundingClientRect().top;
+                if (elementTop < windowHeight - 50) {
+                    element.style.opacity = 1;
+                    element.style.transform = 'translateY(0)';
+                }
+            });
+        });
+    </script>
+</body>
+</html>
